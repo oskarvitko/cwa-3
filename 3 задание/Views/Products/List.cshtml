@@ -1,0 +1,30 @@
+﻿@model List<_3_задание.Models.Product>
+@{
+    ViewBag.Title = "Products";
+}
+<div class="container">
+<h2 class="Products-List__title">Products List</h2>
+
+<table class="Products-List__table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr onclick="goto(@item.Id)">
+        <td>@item.Id</td>
+        <td>@item.Name</td>
+        <td>@item.Price</td>
+        <td>@item.Description</td>
+    </tr>
+    }
+</table>
+</div>
+<script>
+    function goto(id) {
+        window.location.pathname = `/Products/Details/${id}`
+    }
+</script>

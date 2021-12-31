@@ -1,0 +1,34 @@
+﻿@model List<_3_задание.Models.Customer>
+@{
+    ViewBag.Title = "Customers";
+}
+<div class="container">
+    <div style="display: flex; align-items: center;">
+    <a style="        
+        padding: 10px 20px;
+        background-color: #0d6efd;
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+    " href="./Add">Add Customer</a>
+    <h2 style="flex-grow: 1;" class="Products-List__title">Customers</h2>
+    </div>
+
+    <table class="Products-List__table">
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Age</th>
+            <th>Phone</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Surname</td>
+                <td>@item.Age</td>
+                <td>@item.Phone</td>
+            </tr>
+        }
+    </table>
+    </div>

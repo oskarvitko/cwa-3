@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+
+<div class="container">
+    <h2 class="Products-List__title">Add Customer</h2>
+    <form action="/Customers/Add" method="post">
+        <input required type="text" placeholder="Name" name="name" />
+        <input required type="text" placeholder="Surname" name="surname" />
+        <input required type="text" placeholder="Age" name="age" />
+        <input required type="text" placeholder="Phone" name="phone" />
+        <button type="submit">Add</button>
+    </form>
+</div>
